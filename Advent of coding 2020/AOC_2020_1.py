@@ -11,6 +11,8 @@ with open('/Users/jack/Documents/Scratch/AOC_2020_1_input.txt') as in_file:
     for i in in_file_list:
         puzzle_input.append(int(i.replace('\n','')))
 
+# PART ONE: finding two numbers that sum to 2020
+
 # for each item in the puzzle input
 for i in range(len(puzzle_input)):
     # loop through the remaining puzzle items
@@ -27,13 +29,15 @@ print("Second value: ", second_value)
 print("Answer: ", answer)
 print("\n")
 
+# PART TWO: finding three numbers that sum to 2020
 
 # for each item in the puzzle input
 for i in range(len(puzzle_input)):
     # loop through the remaining puzzle items
     for j in range(len(puzzle_input)):
+        # and for each combination of the first two, loop through the remaining puzzle items again
         for k in range(len(puzzle_input)):
-            # check if the sum of the two elements is 2020, and that the two elements aren't identical
+            # check if the sum of the three elements is 2020, and that the three elements aren't identical
             if i != j and j != k and i != k and (puzzle_input[i] + puzzle_input[j] + puzzle_input[k]) == 2020:
                 first_value = puzzle_input[i]
                 second_value = puzzle_input[j]  
