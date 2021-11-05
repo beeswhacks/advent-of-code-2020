@@ -1,15 +1,13 @@
 test_str = '1-5 k: kkkkhkkkkkkkkkk'
 
-split_string = test_str.split()
+entry = {
+    "start"         : test_str[:test_str.index('-')],
+    "end"           : test_str[test_str.index('-') + 1 : test_str.index(' ')],
+    "target_letter" : test_str[test_str.index(':') - 1 : test_str.index(':')],
+    "password"      : test_str[test_str.index(':') + 1 :]
+}
 
-lower_and_upper = split_string[0].split('-')
-lower = lower_and_upper[0]
-upper = lower_and_upper[1]
-print("Lower is: ", lower)
-print("Upper is: ", upper)
-
-target_letter = split_string[1][0:1]
-print("Target letter is: ", target_letter)
-
-password = split_string[2]
-print("Password is: ", password)
+print("Start = " + entry["start"])
+print("End = " + entry["end"])
+print("Target letter = " + entry["target_letter"])
+print("Target = " + entry["password"])
