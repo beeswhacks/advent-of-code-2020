@@ -1,3 +1,9 @@
+from operator import xor
+
+# ------------------------------ PART 1 ------------------------------
+# In part 1, the password is valid if the number of instances of the 
+# target letter in the password is within a given window.
+
 # read password policies into a list so that i can loop through them
 with open('/Users/jack/Repos/side/Advent of coding 2020/AOC_2020_2_input.txt') as in_file:
     in_file_list = in_file.readlines()
@@ -25,4 +31,32 @@ for i in puzzle_input:
     if target_letter_count >= i["lower_lim"] and target_letter_count <= i["upper_lim"]:
         valid_password_count += 1
 
-print(valid_password_count, "passwords are valid.")
+print(valid_password_count, "passwords are valid in part 1.")
+
+# ------------------------------ PART 2 ------------------------------
+# In part 2, the password is valid if the target letter is at only one 
+# of two specified positions in the password. The first position is given
+# by lower_lim, the second position is given by upper_lim. 
+
+valid_password_count = 0
+for i in puzzle_input:
+
+    # check if target letter is at position 1
+    if i["password"][i["lower_lim"]] == i["target_letter"]:
+        position_1 = True
+    else:
+        position_1 = False
+
+    # check if target letter is at position 2
+    if i["password"][i["upper_lim"]] == i["target_letter"]:
+        position_2 = True
+    else:
+        position_2 = False
+
+    # mark password valid if target letter appears in one position only
+    password_valid = xor(position_1,position_2)
+
+    if password_valid == True:
+        valid_password_count += 1
+
+print(valid_password_count, "passwords are valid in part 2.")
