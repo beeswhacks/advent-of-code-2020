@@ -1,0 +1,2 @@
+# Advent of coding 2020
+This folder contains all the code and files associated with my attempt at the [Advent of Code 2020](https://adventofcode.com/2020). I started working through the Advent of Code 2020 towards the end of 2021 as a way to learn Python. I had started learning it through a Cisco Python course but found the pace too slow: the course was aimed at people who were completely new to both programming and Python, and I was only the latter. Doing the advent of code gave me the structure and direction I felt I needed to learn the language.
