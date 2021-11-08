@@ -12,7 +12,12 @@ with open('/Users/jack/Repos/side/Advent of coding 2020/AOC_2020_2_input.txt') a
 for i in in_file_list:
     i = i.replace('\n','')
         
-# parse each password policy into a dictionary object
+# parse each password policy into a dictionary object.
+# puzzle_input is a list of dictionary objects, meaning
+# the components of each policy can be referenced by name, and
+# each individual policy can be referenced by number e.g.
+# the target letter of the nth password policy can be accessed
+# as puzzle_input[n]["target_letter"]. 
 puzzle_input = []
 for i in in_file_list:
     puzzle_input.append({
