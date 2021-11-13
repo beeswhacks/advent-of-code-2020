@@ -2,7 +2,7 @@
 puzzle_input = []
 
 # get puzzle input from text file
-with open('/Users/jack/Documents/Scratch/AOC_2020_1_input.txt') as in_file:
+with open('/Users/jack/Repos/advent-of-code-2020/AOC_2020_1_input.txt') as in_file:
 
     # use readlines to split text file into list
     in_file_list = in_file.readlines()

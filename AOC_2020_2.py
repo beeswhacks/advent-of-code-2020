@@ -5,7 +5,7 @@ from operator import xor
 # target letter in the password is within a given window.
 
 # read password policies into a list so that i can loop through them
-with open('/Users/jack/Repos/side/Advent of coding 2020/AOC_2020_2_input.txt') as in_file:
+with open('/Users/jack/Repos/advent-of-code-2020/AOC_2020_2_input.txt') as in_file:
     in_file_list = in_file.readlines()
     
 # remove newline characters
